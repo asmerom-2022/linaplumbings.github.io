@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing & Heating Services</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your stylesheet -->
+      <!-- add font awesom icon -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Contact us</h1>
+        </div>
+        <nav class="nav">
+            <label for="toggle" class="toggle-btn"><i class="fas fa-bars"></i></label>
+            <ul class="pages">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p> Call us  <a href="tel:07944092572">+447944092572</a></p>
+        </nav>
+    </header>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form class="contact-form" action="#" method="post">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <button class="btn-submit" type="submit">Send Message</button>
+            <div id="success-message" style="display: none; color: green;"></div>
+        </form>
+    </div>
+    <section id="contact">
+        <div class="contact-section">          
+            <h1>Get in touch!</h1>
+            <p>If you have any inquiries or require our services, feel free to reach out to us. We are here to assist you!</p>
+            <address class="address">
+                <strong>Plumbing & Heating Services</strong><br>
+                United kingdom<br>
+                City: plymouth<br>
+                Phone: <a href="tel:07944092572">+447944092572</a><br>
+                Email: <a href="mailto:habte_445@yahoo.com">habte_445@yahoo.com</a>
+            </address>
+            <ul>
+                <li><a href="mailto:habte_445@yahoo.com"><i class="fas fa-envelope icon"></i></a></li>
+                <li><a href="https://www.facebook.com/your_facebook_profile"><i class="fab fa-facebook icon"></i></a></li>
+                <li><a href="https://wa.me/+447944092572"><i class="fab fa-whatsapp icon"></i></a></li>
+                <!-- <li><a href="https://instagram.com/asi_joni?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram icon"></i></a></li> -->
+                <li><a href="https://m.me/your_facebook_profile" target="_blank"><i class="fab fa-facebook-messenger icon"></i></a></li>
+                <li><a href="sms:+447944092572" title="SMS"><i class="fas fa-comment icon"></i></a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </div>
+    </section>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const comment = document.getElementById('comment').value;
+
+            // Validation: Check if any of the fields is empty
+            if (!name || !email || !comment) {
+                alert('Please fill in all the required fields.');
+                return false;
+            }
+
+            // You can replace this part with your server-side submission logic
+            // Simulating a successful submission
+            // Replace with your actual submission logic
+            alert('Submit successful!');
+
+            // Clear the form fields after successful submission
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('comment').value = '';
+
+            return false;
+        }
+
+        function displaySuccessMessage(message) {
+            const successMessage = document.getElementById('success-message');
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+        }
+    </script>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Lina plumbing and Heating</p>
+        </div>
+    </footer>
+    <script>
+            // for toggle button on header
+    document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const pages = document.querySelector('.pages');
+
+    toggleBtn.addEventListener('click', function() {
+        pages.style.display = (pages.style.display === 'flex') ? 'none' : 'flex';
+    });
+});
+    </script>
+</body>
+</html>

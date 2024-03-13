@@ -1,0 +1,620 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: #333;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+}
+
+.pages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.pages li {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.pages li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav p {
+    font-size: 20px;
+    color: #1edb47;
+    margin-right: 20px;
+    
+}
+.nav p a{
+    font-size: 20px;
+    color: #1edb47;
+    margin-right: 20px;
+}
+
+.toggle-btn {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .pages {
+        display: none;
+        position: absolute;
+        top: 80px;
+        /* left: 0; */
+        right: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+        flex-direction: column;
+        width: 150px;
+    }
+
+    .toggle-btn {
+        display: block;
+        position: absolute; /* Set the toggle button to absolute position */
+        top: 20px; /* Adjust the top position as needed */
+        right:15%; /* Set the toggle button to the right corner */
+    }
+    .pages.show {
+        display: flex;
+    }
+    .pages li {
+        margin-bottom: 10px; /* Add margin between list items for smaller screens */
+    }
+}
+
+header, nav, section, footer {
+    margin: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* Add the following styles for the hero section */
+
+
+.hero-slider {
+    margin-top: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlay h1, .overlay p {
+    margin: 0;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Background color for the button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.prev-button,
+.next-button {
+    /* background-color: #3498db; */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next-button {
+    right: 0;
+}
+
+/* Update the styles for the active slide indicator */
+
+.slide-indicators {
+    display: flex;
+    margin: 0 10px;
+}
+.slide-indicator {
+    flex-direction: row;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide-indicator.active {
+    background-color: #3498db;
+}
+/* Update the styles for the active slide indicator */
+.slide-indicator.active {
+    background-color: #3498db;
+}
+
+/* Additional styling for better readability */
+#introduction, #services, #contact{
+    margin-top: 20px;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+}
+
+/* ... introduction styles ... */
+
+.introduction-section {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+.introduction-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.introduction-image {
+    flex: 1;
+    margin-right: 20px; /* Add space between image and text */
+    /* align-items: left; */
+}
+
+.introduction-image img {
+    width: 100%; /* Set the width to 100% to make it responsive */
+    max-width: 600px; /* Set the maximum width for the image */
+    height: auto;
+    max-height: 400px; /* Set the maximum height for the image */
+}
+
+.introduction-text {
+    flex: 1;
+    text-align: left;
+    max-width: 600px; /* Set the maximum width for the text */
+}
+
+/* Responsive styles for stacking on small screens */
+@media screen and (max-width: 767px) {
+    .introduction-section {
+        flex-direction: column;
+    }
+
+    .introduction-image,
+    .introduction-text {
+        flex: 100%;
+        margin: 0;
+    }
+}
+
+
+/* ... service styles  start ... */
+
+/* Default styles */
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+}
+
+.service-item {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    max-width: calc(50% - 40px); /* Adjust max-width to fit 2 items in a row */
+}
+
+/* Adjust max-width for service images */
+.service-item img {
+    width: 100%;
+    max-width: 100%; /* Set maximum width to fill the container */
+    height: auto;
+    max-height: 200px;
+    min-height: 150px;
+    margin-bottom: 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .service-item {
+        max-width: calc(50% - 40px); /* Adjust max-width for 2 items in a row */
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 992px) {
+    .service-item {
+        max-width: calc(25% - 80px); /* Adjust max-width for 4 items in a row */
+    }
+}
+
+
+/* ... service styles end ... */
+
+
+
+/* ... emergency styles start ... */
+
+.emergency-service-section {
+    background-image: url('assets/img_7.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.emergency-service-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.emergency-service-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.emergency-service-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.emergency-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e74c3c; /* Red color, adjust as needed */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.emergency-button:hover {
+    background-color: #c0392b; /* Darker red color on hover, adjust as needed */
+}
+
+/* ... emergency styles end ... */
+
+
+
+
+/* ... contact styles start ... */
+
+#contact {
+    text-align: center;
+    background-color: #2c3e50;
+    width: 100%;
+}
+
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    /* padding-top: 10%; */
+    height: auto;       
+}
+
+.contact-section p{
+    font-size: 20px;
+    color: #fff;
+}
+.address {
+    color: #fff;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.address a{
+    color: #fff;
+}
+.contact-section h1{
+    color: #ccc;
+    font-size: 42px;
+}
+
+.contact-section ul{
+    list-style: none;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap links to the next line on small screens */
+}
+.contact-section ul li{
+    margin: 5px;   
+}
+.contact-section ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: #d3ddcf;
+    border-radius: 80%;
+    transition: background-color 0.3s ease; 
+}
+
+.contact-section ul li a:hover{
+    color: #3498db;
+}
+.icon {
+    font-size: 42px;
+}
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Push the footer to the bottom of the page */
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+
+/* ************* end contact ****************** */
+
+/* ***************** start About us page **************** */
+
+#about {
+    padding: 20px;
+}
+
+.story-item {
+    margin-bottom: 40px;
+    margin-top: 10%;
+}
+
+.story-item img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.story-item h3 {
+    text-align: center;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Center the gallery horizontally */
+    align-items: center; /* Center the gallery vertically */
+    height: auto; /* Set height to full viewport height */
+    background-color: #f0f0f0; /* Optional: Background color */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: center; /* Align images in the center horizontally */
+}
+
+.gallery img {
+    width: calc(25% - 20px); /* Adjust image size to occupy 25% of the container width with some margin */
+    height: auto;
+    margin: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+@media screen and (max-width: 600px) {
+    .gallery img {
+        width: calc(50% - 20px); /* Adjust image size for smaller screens to occupy 50% of the container width */
+    }
+}
+
+/* ***************** end About us page **************** */
+
+/* ************************** start services page ********************** */
+#services {
+    padding: 20px 0;
+    margin-top: 10%;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: calc(25% - 80px); /* Adjust to fit four services per row */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .service {
+        width: 100%; /* Display in a single column for smaller screens */
+    }
+}
+
+
+/* ******************* start service page ********************* */
+
+
+
+/* ******************* start contact page ********************* */
+
+.contact-container {
+    /* background-color: #6e6868; */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20% 20% 0% 30%;
+    }
+    
+    .contact-container h1 {
+    text-align: center;
+    color: #cbced1;
+    font-size: 42px;
+    font-weight: bold;
+    }
+    
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .input-group {
+    margin: 10px 10px;
+    }
+    
+    .input-group label {
+    font-weight: bold;
+    color: #ccc;
+    }
+    
+    .input-group input,
+    .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #413939;
+    border-radius: 5px;
+    background-color: #404042;
+    }
+    
+    .btn-submit {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-right: 30%;
+    /* width: 300px; */
+    justify-content: center;
+    }
+    
+    .btn-submit:hover {
+    background-color: #0056b3;
+    }                          
+    
+
+/* ******************** end contact page ************************* */
