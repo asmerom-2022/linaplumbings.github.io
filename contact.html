@@ -39,10 +39,11 @@
                 <label for="comment">Comment</label>
                 <textarea id="comment" name="comment" rows="4" required></textarea>
             </div>
-            <button class="btn-submit" type="submit">Send Message</button>
-            <div id="success-message" style="display: none; color: green;"></div>
+            <button class="btn-submit" type="button" onclick="displayMessage()">Send Message</button>
+            <div id="message-container" style="display: none; color: green;">our feedback not working temporary please use email, phone number or social media from the below section</div>
         </form>
     </div>
+
     <section id="contact">
         <div class="contact-section">          
             <h1>Get in touch!</h1>
@@ -112,6 +113,14 @@
         pages.style.display = (pages.style.display === 'flex') ? 'none' : 'flex';
     });
 });
+    </script>
+
+    <!-- for submit button -->
+    <script>
+        function displayMessage() {
+            var messageContainer = document.getElementById("message-container");
+            messageContainer.style.display = "block";
+        }
     </script>
 </body>
 </html>

@@ -270,6 +270,10 @@ a {
 /* ... service styles  start ... */
 
 /* Default styles */
+
+.service-section h2{
+    color: #1edb47;
+}
 .service-items {
     display: flex;
     justify-content: space-around;
