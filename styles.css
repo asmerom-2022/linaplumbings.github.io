@@ -132,8 +132,8 @@ a {
 .hero-image {
     width: 100%;
     height: auto;
-    min-height: 400px;
-    max-height: 500px;
+    height: 400px;
+    /* max-height: 500px; */
     display: block;
 }
 
@@ -551,6 +551,7 @@ footer {
 .service-info {
     padding: 20px;
 }
+
 
 @media screen and (max-width: 768px) {
     .service {

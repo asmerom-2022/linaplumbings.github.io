@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             image: 'assets/img_12.jpg',
             heading: 'Our Beginning',
-            text: 'It all began in a small garage in 2018. John Smith, a recent graduate with a passion for mechanics and a knack for fixing things, started Sureflow Plumbing. Armed with a toolbox, a pickup truck, and an unwavering work ethic, John set out to tackle the leaky faucets and clogged drains of his community. His dedication to quality service and fair pricing quickly earned him a loyal clientele.'
+            text: 'It all began in a small garage in 2018. mr. Habtu, a recent graduate with a passion for mechanics and a knack for fixing things, started Sureflow Plumbing. Armed with a toolbox, a pickup truck, and an unwavering work ethic, Habtu set out to tackle the leaky faucets and clogged drains of his community. His dedication to quality service and fair pricing quickly earned him a loyal clientele.'
         },
         {
             image: 'assets/img_11.jpg',
             heading: 'Our Growth',
-            text: 'Word of Johns expertise spread like wildfire. Soon, he was no longer a one-man operation. He hired his first apprentice, Tom, who shared his commitment to customer satisfaction. Together, they tackled more complex projects, from installing new heating systems to repairing burst pipes. Their reputation for reliability and expertise cemented Sureflows place as a trusted name in the community.',
+            text: 'Word of habtu expertise spread like wildfire. Soon, he was no longer a one-man operation. He hired his first apprentice, Tom, who shared his commitment to customer satisfaction. Together, they tackled more complex projects, from installing new heating systems to repairing burst pipes. Their reputation for reliability and expertise cemented Sureflows place as a trusted name in the community.',
 
             'Facing Challenges and Embracing Innovation (2020)':
             
