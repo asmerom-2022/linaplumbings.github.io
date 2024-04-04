@@ -449,22 +449,31 @@ footer {
 }
 
 .about-image {
-    position: relative; /* Ensure positioning context for absolute positioning */
-    width: 100%; /* Ensure the container fills the width of its parent */
-    max-width: 800px; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding-top: 56.25%; /* Set a 16:9 aspect ratio (9 / 16 * 100%) */
-    overflow: hidden; /* Hide any overflow if the image exceeds the container's width */
-}
+    position: relative;
+    max-height: 100%; /* Allow image to shrink on small screens */
+    margin: 0 auto;
+    padding-top: 56.25%;
+    /* Removed padding-top for responsive height control */
+    overflow: hidden;
+  }
+  
+  .about-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure image fills container width */
+    height: 100%; /* Ensure image fills container height */
+    object-fit: cover;
+  }
+  
+  /* Media Queries for Responsive Behavior */
+  @media (min-aspect-ratio: 16/9) { /* Target 16:9 aspect ratio screens */
+    .about-image {
+      padding-top: 36.25%; /* Set a 16:9 aspect ratio (9 / 16 * 100%) for large screens */
+    }
+  }
 
-.about-image img {
-    position: absolute; /* Position the image relative to its container */
-    top: 0; /* Position the image at the top of the container */
-    left: 0; /* Position the image at the left of the container */
-    width: 100%; /* Ensure the image fills the width of its container */
-    height: 100%; /* Ensure the image fills the height of its container */
-    object-fit: cover; /* Maintain the aspect ratio of the image while covering the container */
-}
+  
 .about-content h2{
  text-align: center;
 }
