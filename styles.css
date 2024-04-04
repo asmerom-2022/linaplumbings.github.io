@@ -445,6 +445,36 @@ footer {
     padding: 20px;
 }
 
+.about-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between image and text */
+}
+
+.about-image img {
+    width: 100%; /* Ensure the image fills the width of its container */
+    max-height: 500px; /* Maintain the aspect ratio of the image */
+}
+
+@media screen and (min-width: 768px) {
+    /* Apply styles for screens wider than 768px */
+    .about-image img {
+       height: auto;
+        max-width: 100%; /* Ensure the image does not exceed its container's width */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Apply styles for screens wider than 1024px */
+    .about-image img {
+        height: auto;
+      max-width: 80%; /* Limit the maximum width of the image */
+    }
+}
+
+
 .story-item {
     margin-bottom: 40px;
     margin-top: 10%;
